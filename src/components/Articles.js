@@ -2,7 +2,7 @@
 //
 import { Component } from "react";
 
-import ArticleDetails from './ArticleDetails';
+import ArticleCards from './ArticleCards';
 
 //*****************************************************************************
 //
@@ -32,7 +32,7 @@ class Articles extends Component {
         console.log(this.state.articleData);
         return (
             <section className="Articles">
-                {this.state.articleData.length && this.state.articleData.map(article => <ArticleDetails key={article.url} article={article} />)}
+                {this.state.articleData.length && this.state.articleData.map(article => <ArticleCards key={article.url} article={article} />)}
             </section>
         );
     }

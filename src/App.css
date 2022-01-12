@@ -38,6 +38,25 @@
 }
 
 /****************************************************************************/
+
+.mainQuery {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+        Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+    padding: 1vmin 2vmin;
+    border-bottom: 5px double #333;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+.mainQuery * {
+    margin: 0 1vh;
+}
+.mainQuery button {
+    padding: 0.5vh 1vw;
+}
+
+/****************************************************************************/
 .Articles {
     padding: 1vmin 5vmin;
     display: flex;
@@ -48,27 +67,27 @@
     /*======================================================================*/
     /*======================================================================*/
 }
-.ArticleDetails {
+.ArticleCards {
     width: 30%;
     /* border: 1px solid #333; */
     margin-bottom: 5vmin;
     background: white;
 }
-.ArticleDetails img {
+.ArticleCards img {
     width: 100%;
 }
-.ArticleDetails h4,
-.ArticleDetails h4,
-.ArticleDetails p {
+.ArticleCards h4,
+.ArticleCards h4,
+.ArticleCards p {
     padding: 1vmin 2vmin;
 }
 
-.ArticleDetails div {
+.ArticleCards div {
     padding: 1vmin 2vmin;
     text-align: center;
 }
 
-.ArticleDetails a {
+.ArticleCards a {
     display: inline-block;
     text-decoration: none;
     margin: 1vmin 0;

@@ -1,6 +1,7 @@
-import { BrowserRouter, NavLink } from "react-router-dom";
+import { NavLink } from "react-router-dom";
+import { BrowserRouter } from "react-router-dom";
 
-const ArticleDetails = (data) => {
+const ArticleCards = (data) => {
 
     const article = data.article;
 
@@ -17,15 +18,17 @@ const ArticleDetails = (data) => {
 
 
 
-    return (<article className="ArticleDetails">
+    return (<article className="ArticleCards">
         <img src={article.urlToImage} alt="" />
         <h4>{article.title}</h4>
         <p>{article.description}</p>
 
         <div>
             <p>{formatDate(article.publishedAt)}</p>
+            {/* <a href={article.url} target="_blank" rel="noreferrer">Read More</a> */}
             <BrowserRouter>
-                <NavLink to={article.url}>Read More</NavLink>
+                {/* <NavLink to={{ pathname: article.url }} target="_blank" rel="noreferrer">Read More2</NavLink> */}
+                <NavLink to={{ pathname: article.url }} target="_blank">Read More</NavLink>
             </BrowserRouter>
         </div>
 
@@ -33,4 +36,4 @@ const ArticleDetails = (data) => {
     </article>);
 }
 
-export default ArticleDetails;
+export default ArticleCards;

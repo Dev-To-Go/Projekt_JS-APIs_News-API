@@ -1,4 +1,5 @@
 import { Component } from "react";
+import Filter from "./Filter";
 
 class Header extends Component {
 
@@ -15,9 +16,12 @@ class Header extends Component {
         return (
             <header className="Header">
                 <div className="HeaderTitle">
-                    <p>Parteiisch &amp; Meinungsmachend</p>
+                    <p>Abhängig<br />Parteiisch<br />Meinungsmachend</p>
                     <h1>Ruhrpott News</h1>
                     <p>{this.getCurrentDate()}</p>
+                </div>
+                <div className="HeaderFilter">
+                    <Filter />
                 </div>
             </header>
         );
