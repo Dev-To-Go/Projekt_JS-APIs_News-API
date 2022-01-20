@@ -1,33 +1,10 @@
 //*****************************************************************************
-// language
-// The 2-letter ISO-639-1 code of the language you want to get headlines for.
-// Possible options:
-//    ar,de,en,es,fr,he,it,nl,no,pt,ru,se,ud,zh.
-const languages = [
-    { key: "de", value: "Deutsch" },
-    { key: "ar", value: "العربية" },
-    { key: "en", value: "English" },
-    { key: "es", value: "Español" },
-    { key: "fr", value: "Français" },
-    { key: "he", value: "עברית" },
-    { key: "it", value: "Italiano" },
-    { key: "nl", value: "Nederlands" },
-    { key: "no", value: "Norsk" },
-    { key: "pt", value: "Português" },
-    { key: "ru", value: "русский" },
-    { key: "se", value: "Davvisámegiella" },
-    // { key: 'ud', value: '' },
-    { key: "zh", value: "中文" }
-];
-
-
-//*****************************************************************************
-// country
+// country, used for top-headlines
 // The 2-letter ISO 3166-1 code of the country you want to get headlines for.
 // Possible options:
 //     ae,ar,at,au,be,bg,br,ca,ch,cn,co,cu,cz,de,eg,fr,gb,gr,hk,hu,id,ie,il,in,it,jp,kr,
 //     lt,lv,ma,mx,my,ng,nl,no,nz,ph,pl,pt,ro,rs,ru,sa,se,sg,si,sk,th,tr,tw,ua,us,ve,za
-const countries = [
+export const countries = [
     { key: "de", value: "Deutschland" },
     { key: "ae", value: "United Arab Emirates" },
     { key: "ar", value: "Argentina" },
@@ -83,47 +60,3 @@ const countries = [
     { key: "ve", value: "Venezuela" },
     { key: "za", value: "South Africa" }
 ];
-
-
-
-const Filter = () => {
-    return (
-        <form className="mainQuery">
-            <label htmlFor="txtKeywords">Suche
-                <input type="text" name="txtKeywords" id="txtKeywords" />
-            </label>
-
-            <label htmlFor="dateStart">Anfangsdatum
-                <input type="date" name="dateStart" id="dateStart" />
-            </label>
-
-            <label htmlFor="dateEnd">Enddatum
-                <input type="date" name="dateEnd" id="dateEnd" />
-            </label>
-
-            <label htmlFor="selectCountry">Land
-                <select name="selectCountry" id="selectCountry">
-                    {countries.length && countries.map(country =>
-                        <option key={country.key} value={country.key}>{country.value}</option>)}
-                </select>
-            </label>
-
-            <label htmlFor="selectLanguage">Sprache
-                <select name="selectLanguage" id="selectLanguage">
-                    <option value="*">Alle</option>
-                    {languages.length && languages.map(language =>
-                        <option key={language.key} value={language.key} {...language.length > 2 ? language.selected : ""}>{language.value}</option>)}
-                </select>
-            </label>
-
-            <label htmlFor="selectCategory">Kategorie
-                <select name="selectCategory" id="selectCategory">
-                    <option value="*">Alle</option>
-                </select>
-            </label>
-            <button>SUCHEN</button>
-        </form >
-    );
-}
-
-export default Filter;

@@ -15,6 +15,12 @@ class Articles extends Component {
         }
     }
 
+
+    // q=apple&from=2022-01-18&to=2022-01-18&sortBy=popularity
+
+
+
+
     componentDidMount() {
         fetch(`${process.env.REACT_APP_APIURL}/v2/top-headlines?country=de&sortBy=publishedAt&apiKey=${process.env.REACT_APP_APIKEY}`)
             .then(response => response.json())
